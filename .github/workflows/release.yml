@@ -37,3 +37,11 @@ jobs:
         with:
           push: true
           tags: angeloxx/playground:${{ steps.get_tag_name.outputs.TAG }}
+
+      - uses: ethomson/send-tweet-action@v1
+        with:
+          status: "This is a test, new release of angeloxx/playground (version ${{ steps.get_tag_name.outputs.TAG }}) is out! 🚀"
+          consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+          consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
