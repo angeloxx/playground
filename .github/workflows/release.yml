@@ -41,7 +41,7 @@ jobs:
       - uses: noweh/post-tweet-v2-action@v1.0
         with:
           message: |
-            "This is a test, new release of angeloxx/playground (version ${{ steps.get_tag_name.outputs.TAG }}) is out! 🚀"
+            This is a test, new release of angeloxx/playground (version ${{ steps.get_tag_name.outputs.TAG }}) is out! 🚀
           consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
           consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
           access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
